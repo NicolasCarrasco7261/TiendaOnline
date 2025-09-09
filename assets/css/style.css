@@ -1,0 +1,31 @@
+#bodyHome {
+    background-color: #121021;
+    font-family: "Noto Sans", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+}
+
+#headerHome {
+    display: flex;
+    border-bottom: 1px solid #2c2740;
+    padding-left: 50px;
+}
+
+#headerContainer {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    height: 120px;
+    width: 120px;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+#btnCarrito {
+    padding-left: 900px;
+    color: white;
+    font-size: 30px; /* Ajusta este valor para cambiar el tamaño del icono */
+}
