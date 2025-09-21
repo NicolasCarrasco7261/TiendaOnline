@@ -1,31 +1,109 @@
-#bodyHome {
-    background-color: #121021;
+*{
     font-family: "Noto Sans", sans-serif;
     font-style: italic;
     font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #121021;
 }
 
 #headerHome {
     display: flex;
     border-bottom: 1px solid #2c2740;
-    padding-left: 50px;
+    width: 80%;
+    margin: 0 10%;
 }
 
 #headerContainer {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    font-size: large;
 }
 
 #logo {
-    height: 120px;
-    width: 120px;
-    margin-top: 20px;
-    margin-left: 150px;
-    margin-right: 100px;
+    height: auto;
+    max-width: 120px;
+}
+
+#form-search{
+    display: flex;
+    padding-left: 10em;
+    width: 500px;
 }
 
 #btnCarrito {
-    padding-left: 900px;
     color: white;
     font-size: 30px;
+}
+
+.login {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    width: 80%;
+    gap: 10px;
+    margin: 10px 10%;
+}
+.login a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#carrusel {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 80%;
+    margin: 0 10%;
+}
+
+
+#cards {
+    width: 80%;
+    margin: 0 10%;
+    justify-content: space-between;
+}
+.card-img-top {
+  max-width: 100%; 
+  max-height: 300px; 
+  object-fit: cover; 
+}
+#cardBody{
+    background: linear-gradient(to right, #121021, #2c2740);
+    align-content: end;
+}
+
+
+@media (max-width: 768px){
+    #headerHome {
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #2c2740;
+    }
+
+    #logo {
+        width: 80px;
+    }
+
+    #form-search{
+        width: 100%;
+        padding-left: 0;
+        margin-top: 1em;
+    }
+
+    nav a{
+        display: none;
+    }
+
+
+    #btnCarrito {
+        color: white;
+        font-size: 30px;
+    }
 }

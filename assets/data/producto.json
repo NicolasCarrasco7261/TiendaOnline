@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "titulo": "Cyberpunk 2077",
+    "descripcion": "Un RPG futurista en una ciudad abierta llena de historias.",
+    "imagen": "https://nxtgame.cl/wp-content/uploads/2023/06/cyberpunk-2077.jpg",
+    "precio": 39990,
+    "requisitos_minimos": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5-3570K",
+      "ram": "8 GB",
+      "gpu": "GTX 780"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i7-4790",
+      "ram": "16 GB",
+      "gpu": "GTX 1060"
+    }
+  },
+  {
+    "id": 2,
+    "titulo": "Red Dead Redemption 2",
+    "descripcion": "Acción y aventura en el salvaje oeste con gráficos realistas.",
+    "imagen": "https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png",
+    "precio": 45990,
+    "requisitos_minimos": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5-2500K",
+      "ram": "8 GB",
+      "gpu": "GTX 770"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i7-4770K",
+      "ram": "12 GB",
+      "gpu": "GTX 1060 6GB"
+    }
+  },
+  {
+    "id": 3,
+    "titulo": "Minecraft",
+    "descripcion": "Construcción, supervivencia y creatividad en un mundo de bloques.",
+    "imagen": "https://cdnx.jumpseller.com/deus-digital/image/26018632/thumb/719/719?1659480453",
+    "precio": 19990,
+    "requisitos_minimos": {
+      "so": "Windows 7",
+      "procesador": "Intel Core i3",
+      "ram": "4 GB",
+      "gpu": "Intel HD Graphics 4000"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5",
+      "ram": "8 GB",
+      "gpu": "GTX 660"
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "Grand Theft Auto V",
+    "descripcion": "Mundo abierto con crimen, acción y múltiples personajes jugables.",
+    "imagen": "https://therpgstore.com/wp-content/uploads/2018/03/Grand-Theft-Auto-V-Premium-Edition-90.jpg",
+    "precio": 24990,
+    "requisitos_minimos": {
+      "so": "Windows 7",
+      "procesador": "Intel Core 2 Quad",
+      "ram": "4 GB",
+      "gpu": "Nvidia 9800 GT"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5-3470",
+      "ram": "8 GB",
+      "gpu": "GTX 660"
+    }
+  },
+  {
+    "id": 5,
+    "titulo": "Assassin's Creed Valhalla",
+    "descripcion": "Descripcion generica del videojuego Assassin's Creed Valhalla.",
+    "imagen": "https://via.placeholder.com/200x250?text=Assassin's+Creed+Valhalla",
+    "precio": 24990,
+    "requisitos_minimos": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5",
+      "ram": "8 GB",
+      "gpu": "GTX 960"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i7",
+      "ram": "16 GB",
+      "gpu": "GTX 1660"
+    }
+  },
+  {
+    "id": 6,
+    "titulo": "Elden Ring",
+    "descripcion": "Descripcion generica del videojuego Elden Ring.",
+    "imagen": "https://via.placeholder.com/200x250?text=Elden+Ring",
+    "precio": 29990,
+    "requisitos_minimos": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5",
+      "ram": "8 GB",
+      "gpu": "GTX 960"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i7",
+      "ram": "16 GB",
+      "gpu": "GTX 1660"
+    }
+  },
+  {
+    "id": 7,
+    "titulo": "Hollow Knight",
+    "descripcion": "Descripcion generica del videojuego Hollow Knight.",
+    "imagen": "https://via.placeholder.com/200x250?text=Hollow+Knight",
+    "precio": 34990,
+    "requisitos_minimos": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5",
+      "ram": "8 GB",
+      "gpu": "GTX 960"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i7",
+      "ram": "16 GB",
+      "gpu": "GTX 1660"
+    }
+  },
+  {
+    "id": 1,
+    "titulo": "Sekiro: Shadows Die Twice",
+    "descripcion": "Descripcion generica del videojuego Sekiro: Shadows Die Twice.",
+    "imagen": "https://via.placeholder.com/200x250?text=Sekiro:+Shadows+Die+Twice",
+    "precio": 39990,
+    "requisitos_minimos": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5",
+      "ram": "8 GB",
+      "gpu": "GTX 960"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i7",
+      "ram": "16 GB",
+      "gpu": "GTX 1660"
+    }
+  },
+  {
+    "id": 8,
+    "titulo": "Dark Souls III",
+    "descripcion": "Descripcion generica del videojuego Dark Souls III.",
+    "imagen": "https://via.placeholder.com/200x250?text=Dark+Souls+III",
+    "precio": 19990,
+    "requisitos_minimos": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5",
+      "ram": "8 GB",
+      "gpu": "GTX 960"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i7",
+      "ram": "16 GB",
+      "gpu": "GTX 1660"
+    }
+  },
+  {
+    "id": 9,
+    "titulo": "Resident Evil Village",
+    "descripcion": "Descripcion generica del videojuego Resident Evil Village.",
+    "imagen": "https://via.placeholder.com/200x250?text=Resident+Evil+Village",
+    "precio": 24990,
+    "requisitos_minimos": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5",
+      "ram": "8 GB",
+      "gpu": "GTX 960"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i7",
+      "ram": "16 GB",
+      "gpu": "GTX 1660"
+    }
+  }
+]

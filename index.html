@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- link del archivo css -->
-
-    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- link de bootstrap -->
 
@@ -15,33 +12,109 @@
 
     <!-- link de font awesome para iconos -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link del archivo css -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>CDGAMES</title>
 </head>
 
-<body id="bodyHome">
+<body>
 
-    <!-- header general -->
+    <!-- nav -->
 
     <header id="headerHome">
         <div class="container-fluid" id="headerContainer">
             <img src="assets/img/logo.png" alt="Logo de CDGAMES" id="logo">
             <nav class="d-flex gap-1">
-                <a href="index.html" class="text-white text-decoration-none border-end border-2 border-white pe-2 me-2">Inicio</a>
-                <a href="assets/views/producto.html" class="text-white text-decoration-none border-end border-2 border-white pe-2 me-2">Productos</a>
-                <a href="#" class="text-white text-decoration-none border-end border-2 border-white pe-2 me-2">Nosotros</a>
+                <a href="index.html"
+                    class="text-white text-decoration-none border-end border-2 border-white pe-2 me-2">Inicio</a>
+                <a href="assets/views/producto.html"
+                    class="text-white text-decoration-none border-end border-2 border-white pe-2 me-2">Productos</a>
+                <a href="#"
+                    class="text-white text-decoration-none border-end border-2 border-white pe-2 me-2">Nosotros</a>
                 <a href="#" class="text-white text-decoration-none border-end border-2 border-white pe-2 me-2">Blogs</a>
                 <a href="#" class="text-white text-decoration-none">Contacto</a>
+                <form class="d-flex" role="search" id="form-search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </nav>
-            <a href="assets/views/producto.html">
+            <a href="assets/views/producto.html" id="carrito">
                 <i class="fa-solid fa-cart-shopping" aria-hidden="true" id="btnCarrito"></i>
             </a>
         </div>
     </header>
-    
+
+    <!-- end nav -->
+
+    <!-- Carrusel de imagenes -->
+
+    <div class="login">
+        <a href="">iniciar sesion</a>
+        <a href="">registrarse</a>
+    </div>
+    <div id="carrusel" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/img/imagen_html.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/imagen_css.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/imagen_js.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- end carrusel de imagenes -->
+
+    <!-- Div Cards con productos -->
+
+    <h2 class="d-flex justify-content-center text-center mt-4 text-white">Productos Destacados</h2>
+    <div id="cards" class="d-flex flex-wrap mt-4"></div>
+
+    <!-- Fin Div Cards con productos -->
+
+    <!-- Footer -->
+
+    <footer class="bg-dark text-center text-light p-4 container-fluid">
+            <p class="mb-0">CD GAMES ©2025. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="" class="fa-brands fa-instagram  fa-2x"
+                    aria-hidden="true"></a>
+                <a href="" class="fa fa-facebook  fa-2x"
+                    aria-hidden="true"></a>
+            </div>
+    </footer>
+
+    <!-- end footer -->
+
+    <!-- Scripts -->
+    <script src="assets/js/producto.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
