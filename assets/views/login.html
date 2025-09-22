@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="/assets/css/login.css">
 
     <title>CDGAMES Login Page</title>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
     <form>
@@ -32,7 +34,7 @@
             <input type="checkbox" id="visible">
             <label for="visible">Mostrar contraseña</label>
         </div>
-        <button type="submit" id="submit">Iniciar sesion</button>
+        <button type="submit" id="submit" onclick="login()">Iniciar sesion</button>
     </form>
 
     <script src="/assets/js/login.js"></script>

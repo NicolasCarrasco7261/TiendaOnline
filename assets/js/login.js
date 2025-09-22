@@ -1,3 +1,4 @@
+
 const $submit = document.querySelector("#submit"),
     $password = document.querySelector("#password"),
     $username = document.querySelector("#username"),
@@ -13,7 +14,8 @@ document.addEventListener("change", (e) => {
     }
 });
 
-document.addEventListener("click", (e) => {
+function login() {
+    document.addEventListener("click", (e) => {
     if (e.target === $submit) {
         if ($password.value !== "" && $username.value !== "") {
             e.preventDefault();
@@ -23,9 +25,11 @@ document.addEventListener("click", (e) => {
         if ($username.value === validUser && $password.value === validPass) {
             window.location.href = "/index.html";
         } else {
-            alert("Usuario o contraseña incorrectos");
+            swal ("Inicio de sesión fallido",
+                 "Usuario o contraseña incorrectos", "error");
         }
 
         } 
     }
 });
+}
