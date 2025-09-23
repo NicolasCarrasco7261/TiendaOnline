@@ -2,6 +2,7 @@
 const $submit = document.querySelector("#submit"),
     $password = document.querySelector("#password"),
     $username = document.querySelector("#username"),
+    $email = document.querySelector("#email"),
     $visible = document.querySelector("#visible");
 
 document.addEventListener("change", (e) => {
@@ -32,4 +33,36 @@ function login() {
         } 
     }
 });
+}
+
+function register() {
+    document.addEventListener("click", (e) => {
+        if (e.target === $submit){
+            e.preventDefault();
+            
+            if ($username.value.trim() === "" || $email.value.trim() === "") {
+                swal ("Registro fallido",
+                 "Usuario o correo invalido", "error");
+                 return e.preventDefault();
+            }
+            else if ($password.value.trim() === ""){
+                swal ("Registro fallido",
+                 "Contraseña invalida", "error");
+                 return e.preventDefault();
+            }
+            else{
+                swal ("Registro Exitoso",
+                 "Te has registrado correctamente", "success")
+                .then(() => {
+                    window.location.href = "/index.html";
+                });
+                const newUser = {
+                    username: $username.value.trim(),
+                    password: $password.value.trim(),
+                    email: $email.value.trim()
+                };
+            }
+        }
+    });
+
 }
