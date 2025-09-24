@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/producto.css">
-    <title>Document</title>
+
+    <!-- link de font awesome para iconos -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link del archivo css -->
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <title>CDGAMES - Productos</title>
 </head>
+
 <body>
-    
+    <!-- Header - Navbar -->
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="#" class="logo">CDGAMES</a>
+                <button class="menu-btn" id="menuBtn">☰</button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/assets/views/producto.html">Productos</a></li>
+                    <li><a href="/assets/views/nosotros.html">Nosotros</a></li>
+                    <li><a href="/assets/views/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login - Register buttons -->
+
+    <section class="login-links">
+        <div class="login">
+            <button class="btn-login" id="btnLogin" onclick="irLogin()">
+                Iniciar Sesion
+            </button>
+            <button class="btn-login" id="btnRegister" onclick="irRegister()">
+                Registrarse
+            </button>
+        </div>
+    </section>
+
+    <!-- Div Cards con productos -->
+
+    <h2>Productos</h2>
+    <div class="cards-container">
+        <div id="cards" class="cards-productos"></div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>CDGAMES ©2025. Todos los derechos reservados.
+        <br>
+        Pagina en producción
+    </footer>
+
+
+    <!-- Scripts -->
+     <script src="/assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
