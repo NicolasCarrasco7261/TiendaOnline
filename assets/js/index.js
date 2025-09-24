@@ -52,3 +52,36 @@ fetch("/assets/data/producto.json")
 function verMas() {
     window.location.href = "/assets/views/producto.html";
 }
+
+// CONTACTO
+
+const form = document.getElementById("formulario");
+    const respuesta = document.getElementById("respuesta");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
+
+      if (nombre === "" || email === "" || mensaje === "") {
+        swal ("Envio fallido",
+                 "Completa todos los campos solicitados", "error");
+        return;
+      }
+
+      // Validación simple de email
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!regexEmail.test(email)) {
+        swal ("Error al ingresar correo",
+                 "Debes ingresar un correo valido", "error");
+        return;
+      }
+
+      // Si pasa validación
+      swal ("Mensaje enviado exitosamente",
+                 "El mensaje ha sido enviado correctamente", "success");
+      // Limpiar campos
+      form.reset();
+    });
