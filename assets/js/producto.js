@@ -23,18 +23,25 @@ function irRegister() {
     window.location.href = "/assets/views/register.html";
 }
 
-// Spawn de Cards
 
-fetch("/assets/data/producto.json")
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById("cards");
+// Buscar un producto
 
-    data.slice(0, 4).forEach(item => {
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("cards");
+  const searchInput = document.getElementById("search");
+
+  let data = [];
+
+  function renderCards(items) {
+    container.innerHTML = "";
+    if (items.length === 0) {
+      container.innerHTML = "<p>No se encontraron productos</p>";
+      return;
+    }
+
+    items.slice(0, 8).forEach(item => {
       const card = document.createElement("div");
       card.classList.add("card");
-      card.className = "card";
-
       card.innerHTML = `
         <img src="${item.imagen}" alt="${item.titulo}">
         <div class="card-body">
@@ -43,12 +50,26 @@ fetch("/assets/data/producto.json")
           <p class="price">$${item.precio.toLocaleString("es-CL")}</p>
         </div>
       `;
-
       container.appendChild(card);
     });
-  })
-  .catch(error => console.error("Error al cargar JSON:", error));
+  }
 
-function verMas() {
-    window.location.href = "/assets/views/producto.html";
-}
+  // Cargar productos una sola vez
+  fetch("/assets/data/producto.json")
+    .then(response => response.json())
+    .then(json => {
+      data = json;
+      renderCards(data); // mostrar todos al inicio
+    })
+    .catch(error => console.error("Error al cargar JSON:", error));
+
+  // Filtrar en tiempo real
+  searchInput.addEventListener("input", e => {
+    const searchTerm = e.target.value.toLowerCase();
+    const filtered = data.filter(item =>
+      item.titulo.toLowerCase().includes(searchTerm) ||
+      item.descripcion.toLowerCase().includes(searchTerm)
+    );
+    renderCards(filtered);
+  });
+});

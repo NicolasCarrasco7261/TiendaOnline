@@ -89,7 +89,7 @@ nav {
     display: flex;
     width: 80%;
     margin: 10px 10%;
-    max-height: 30rem;
+    max-height: 50rem;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
@@ -113,8 +113,6 @@ h2{
 /* CSS PARA CARDS */
 
 .cards-container {
-    display: flex;
-    justify-content: space-around;
     width: 80%;
     margin: 0 10%;
     padding-top: 1rem;
@@ -123,8 +121,10 @@ h2{
 
 .cards-productos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px; /* 200px * 4 + gaps aprox */
+  margin: 0 auto;
     }
     .card {
       background: white;
@@ -159,6 +159,30 @@ h2{
       color: #0077cc;
     }
 
+.btn-ver-mas {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.btn-ver-mas button {
+    background-color: rgb(212, 102, 28);
+    border: none; 
+    color: white; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+#search{
+    display: flex;
+    justify-self: end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
 
 /* CSS PARA FOOTER */
 
