@@ -32,6 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let data = [];
 
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  function guardarCarrito() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }
+
   function renderCards(items) {
     container.innerHTML = "";
     if (items.length === 0) {
@@ -48,8 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
           <h3>${item.titulo}</h3>
           <p>${item.descripcion}</p>
           <p class="price">$${item.precio.toLocaleString("es-CL")}</p>
+          <button class="add-to-cart">Agregar al carrito</button>
         </div>
       `;
+
+      const btn = card.querySelector(".add-to-cart");
+      btn.addEventListener("click", () => {
+        carrito.push(item); // agregar producto al carrito
+        guardarCarrito();   // guardar en localStorage
+        alert(`${item.titulo} fue agregado al carrito 🛒`);
+      });
+
+      
       container.appendChild(card);
     });
   }

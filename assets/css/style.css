@@ -225,8 +225,10 @@ footer {
 /* CONTACTO */
 
 .contact-form {
+  justify-self: center;
       background: #fff;
-      padding: 2rem;
+      padding: 2rem 2rem;
+      margin: 3rem;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       width: 350px;
@@ -305,7 +307,7 @@ footer {
         position: fixed;
         top: 60px;
         left: 0;
-        bottom: 65%;
+        bottom: 62%;
         width: 100%;
         background-color: #000000;
         flex-direction: column;

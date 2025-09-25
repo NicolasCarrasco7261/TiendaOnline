@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #e2dfdf;
+}
+
+/* CSS PARA HEADER - NAVBAR */
+
+nav {
+    background-color: #000000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 12000px;
+    height: 4rem;
+    margin: 0 auto;
+}
+
+.logo{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.nav-links a:hover{
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* CSS PARA BOTONES DE LOGIN Y REGISTER */
+
+.login-links {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 80%;
+    gap: 10px;
+    margin: 10px 10%;
+}
+.login button{
+    background-color: rgb(212, 102, 28);
+    border: none; 
+    color: white; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.carrito {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* CSS PARA FOOTER */
+
+footer {
+    background-color: #411f77;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* CSS RESPONSIVE */
+
+@media (max-width: 768px){
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        bottom: 62%;
+        width: 100%;
+        background-color: #000000;
+        flex-direction: column;
+        clip-path: circle(0px at 90% -10%);
+        pointer-events: none;
+    }
+
+    .nav-links.active{
+        clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .nav-links li{
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active li{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .nav-links li:nth-child(1) {transition-delay: 0.1s;}
+    .nav-links li:nth-child(2) {transition-delay: 0.2s;}
+    .nav-links li:nth-child(3) {transition-delay: 0.3s;}
+    .nav-links li:nth-child(4) {transition-delay: 0.4s;}
+}
