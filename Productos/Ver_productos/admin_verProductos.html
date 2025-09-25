@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de productos | CDGames</title>
+  <link rel="stylesheet" href="admin_verProductos.css" />
+</head>
+<body>
+  <main class="main">
+    <header class="topbar">
+      <h1>Lista de productos</h1>
+    </header>
+
+    <section class="content">
+      <div class="wrap">
+        <!-- Barra de acciones: extremos separados -->
+        <div class="actions-top">
+          <div class="left">
+            <a class="back-btn" href="../../Home/admin_home.html">← Regresar</a>
+          </div>
+          <div class="right">
+            <button id="btnEliminar" class="btn danger" disabled>Eliminar Producto</button>
+          </div>
+        </div>
+
+        <!-- Mensaje de estado bajo la barra -->
+        <p id="statusMsg" class="status" hidden></p>
+
+        <!-- Tabla -->
+        <div class="table-card">
+          <div class="table-head">Productos guardados</div>
+
+          <div class="table-wrap">
+            <table class="table" aria-label="Tabla de productos">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Plataforma</th>
+                  <th>Precio</th>
+                  <th>Stock</th>
+                  <th>Imagen</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyProductos">
+                <tr class="empty">
+                  <td colspan="7">No hay productos para mostrar.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="admin_verProductos.js" defer></script>
+</body>
+</html>

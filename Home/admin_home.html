@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Administrador | CDGames</title>
+  <link rel="stylesheet" href="admin_home.css" />
+</head>
+
+<body>
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" aria-label="Barra lateral de administración">
+    <div>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">◎</div>
+        <strong>CDGames</strong>
+      </div>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <!-- Home -->
+        <a href="admin_home.html" class="active"><span class="icon">🏠</span><span>Home</span></a>
+
+        <!-- Productos -->
+        <a href="../Productos/Nuevo_producto/admin_nuevoProducto.html"><span class="icon">➕</span><span>Añadir
+            Producto</span></a>
+        <a href="../Productos/Ver_productos/admin_verProductos.html"><span class="icon">📦</span><span>Ver
+            Productos</span></a>
+        <a href="../Productos/Editar_producto/admin_editarProducto.html"><span class="icon">✏️</span><span>Editar
+            Producto</span></a>
+
+        <!-- Usuarios -->
+        <a href="../Usuarios/Nuevo_usuario/admin_nuevoUsuario.html"><span class="icon">➕</span><span>Añadir
+            Usuario</span></a>
+        <a href="../Usuarios/Ver_usuarios/admin_verUsuarios.html"><span class="icon">👥</span><span>Ver
+            Usuarios</span></a>
+        <a href="../Usuarios/Editar_usuario/admin_editarUsuario.html"><span class="icon">✏️</span><span>Editar
+            Usuario</span></a>
+      </nav>
+    </div>
+
+    <div>
+      <div class="profile" aria-label="Perfil">
+        <div class="avatar" aria-hidden="true">A</div>
+        <div>
+          <div style="font-weight:700;">Admin</div>
+          <div style="color:gray; font-size:12px;">Administrador</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+    <header class="topbar">
+      <h1>¡HOLA Administrador!</h1>
+    </header>
+
+    <section class="content" aria-label="Contenido principal">
+      <div class="panel" aria-label="Panel de bienvenida">
+        <div class="welcome">
+          <h2>Te damos la bienvenida al Panel de Administración</h2>
+          <p>
+            Este Home fue creado para que puedas manejar sin complicaciones los recursos principales del sistema.
+            Aquí podrás encontrar las secciones de <strong>Productos</strong> y <strong>Usuarios</strong>, en las cuales
+            tendrás la opción de añadir,
+            modificar o ver los datos que necesites para tu gestión de ventas.
+          </p>
+          <p>
+            Utiliza el menú lateral para moverte entre las diferentes secciones y así mantener al día la plataforma de
+            <strong>CDGames</strong> de una manera organizada y muy eficiente.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="admin_home.js" defer></script>
+</body>
+
+</html>
