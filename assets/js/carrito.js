@@ -15,10 +15,10 @@ menuBtn.addEventListener("click", () => {
 // Funciones para ir login y register
 
 function irLogin() {
-    window.location.href = "/assets/views/login.html";
+    window.location.href = "../views/login.html";
 }
 function irRegister() {
-    window.location.href = "/assets/views/register.html";
+    window.location.href = "../views/register.html";
 }
 
 // Funciones del carrito
@@ -66,31 +66,34 @@ function mostrarCarrito() {
   document.getElementById("total").textContent = "Total: $" + total;
 }
 
-// ✅ Eliminar producto específico
+//  Eliminar producto específico
 function eliminarDelCarrito(index) {
   carrito.splice(index, 1);
   guardarCarrito();
   mostrarCarrito();
 }
 
-// ✅ Vaciar carrito
+//  Vaciar carrito
 document.getElementById("vaciar").addEventListener("click", () => {
   carrito = [];
   guardarCarrito();
   mostrarCarrito();
+  swal ("Carrito Vaciado",
+                 "El carrito ahora esta vacio", "success");
 });
 
-// ✅ Finalizar compra
+//  Finalizar compra
 document.getElementById("comprar").addEventListener("click", () => {
   if (carrito.length === 0) {
-    alert("Tu carrito está vacío.");
+    swal ("Carrito Vacio",
+                 "Debes añadir productos al carrito", "error");
   } else {
-    alert("¡Gracias por tu compra!");
+    swal ("Compra realizada",
+                 "Gracias por su compra", "success");
     carrito = [];
     guardarCarrito();
     mostrarCarrito();
   }
 });
 
-// ✅ Cargar carrito al iniciar la página
 document.addEventListener("DOMContentLoaded", mostrarCarrito);
