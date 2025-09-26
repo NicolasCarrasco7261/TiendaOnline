@@ -14,6 +14,7 @@ document.addEventListener("change", (e) => {
         }
     }
 });
+// /Home/admin_home.html
 
 function login() {
     document.addEventListener("click", (e) => {
@@ -24,7 +25,11 @@ function login() {
             const validPass = "1234";
 
         if ($username.value === validUser && $password.value === validPass) {
-            window.location.href = "/index.html";
+            swal ("Inicio de Sesion Exitoso",
+                 "Has iniciado sesion correctamente", "success")
+                .then(() => {
+                    window.location.href = "../views/index.html";
+                });
         } else {
             swal ("Inicio de sesión fallido",
                  "Usuario o contraseña incorrectos", "error");
@@ -54,7 +59,7 @@ function register() {
                 swal ("Registro Exitoso",
                  "Te has registrado correctamente", "success")
                 .then(() => {
-                    window.location.href = "/index.html";
+                    window.location.href = "../views/index.html";
                 });
                 const newUser = {
                     username: $username.value.trim(),
