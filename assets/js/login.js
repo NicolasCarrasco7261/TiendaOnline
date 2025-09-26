@@ -29,7 +29,7 @@ function login() {
             swal ("Inicio de Sesion Exitoso",
                  "Has iniciado sesion correctamente", "success")
                 .then(() => {
-                    window.location.href = "../views/index.html";
+                    window.location.href = "../../Home/admin_home.html";
                 });
         } else {
             swal ("Inicio de sesión fallido",
@@ -60,7 +60,7 @@ function register() {
                 swal ("Registro Exitoso",
                  "Te has registrado correctamente", "success")
                 .then(() => {
-                    window.location.href = "../views/index.html";
+                    window.location.href = "../../Home/admin_home.html";
                 });
                 const newUser = {
                     username: $username.value.trim(),
