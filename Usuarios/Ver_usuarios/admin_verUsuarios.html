@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de usuarios | CDGames</title>
+  <link rel="stylesheet" href="admin_verUsuarios.css" />
+</head>
+
+<body>
+  <main class="main">
+    <header class="topbar">
+      <h1>Lista de usuarios</h1>
+    </header>
+
+    <section class="content">
+      <div class="wrap">
+        <div class="actions-bar">
+          <a class="back-btn" href="../../Home/admin_home.html">← Regresar</a>
+
+          <div class="actions-right">
+            <button type="button" id="btnDelete" class="btn danger">Eliminar Usuario</button>
+          </div>
+        </div>
+
+        <p id="statusMsg" class="status" hidden></p>
+
+        <div class="card">
+          <div class="table-wrap">
+            <table class="table" id="usuariosTable" aria-label="Listado de usuarios">
+              <thead>
+                <tr>
+                  <th>RUN</th>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>Correo</th>
+                  <th>Región</th>
+                  <th>Comuna</th>
+                  <th>Dirección</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="placeholder">
+                  <td colspan="7">No hay usuarios para mostrar.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Si ya tienes el JS de esta vista, déjalo enlazado -->
+  <script src="admin_verUsuarios.js" defer></script>
+</body>
+
+</html>

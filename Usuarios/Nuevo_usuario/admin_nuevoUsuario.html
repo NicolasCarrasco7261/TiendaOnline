@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuevo Usuario | CDGames</title>
+
+  <!-- Estilos de esta vista -->
+  <link rel="stylesheet" href="admin_nuevoUsuario.css" />
+</head>
+
+<body>
+  <!--encabezado de la pagina-->
+  <header class="topbar">
+    <h1>Nuevo Usuario</h1>
+  </header>
+  <main class="main">
+    <section class="content">
+      <div class="wrap">
+        <!-- Botón para volver al Home -->
+        <a class="back-btn" href="../../Home/admin_home.html" aria-label="Regresar al Home">← Regresar</a>
+
+        <div class="card">
+          <div class="card-title">Registro de usuario</div>
+
+          <!-- Formulario dentro de una card -->
+          <form class="form" novalidate>
+            <label>
+              <span>RUN (sin puntos ni guion)</span>
+              <input type="text" placeholder="Ejemplo: 19011022K" />
+            </label>
+
+            <div class="row">
+              <label>
+                <span>Nombre</span>
+                <input type="text" placeholder="Primer nombre" />
+              </label>
+
+              <label>
+                <span>Apellidos</span>
+                <input type="text" placeholder="Apellidos" />
+              </label>
+            </div>
+
+            <label>
+              <span>Correo electrónico</span>
+              <input type="text" placeholder="Ejemplo: usuario@gmail.com" />
+            </label>
+
+            <label>
+              <span>Fecha de nacimiento (opcional)</span>
+              <input type="text" placeholder="AAAA-MM-DD" />
+            </label>
+
+            <label>
+              <span>Dirección</span>
+              <input type="text" placeholder="Calle, número, depto" />
+            </label>
+
+            <div class="row">
+              <label>
+                <span>Región</span>
+                <input type="text" placeholder="Ejemplo: Metropolitana" />
+              </label>
+
+              <label>
+                <span>Comuna</span>
+                <input type="text" placeholder="Ejemplo: Maipú" />
+              </label>
+            </div>
+
+            <div class="actions">
+              <button type="button" class="btn brand">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>@Administrador</footer>
+  <!--JS que valida y guarda en localStorage-->
+  <script src="admin_nuevoUsuario.js" defer></script>
+</body>
+
+</html>

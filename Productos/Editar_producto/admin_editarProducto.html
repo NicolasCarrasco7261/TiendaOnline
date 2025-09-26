@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar producto | CDGames</title>
+  <link rel="stylesheet" href="admin_editarProducto.css" />
+</head>
+
+<body>
+  <main class="main">
+    <header class="topbar">
+      <h1>Editar producto</h1>
+    </header>
+
+    <section class="content">
+      <div class="wrap">
+        <!-- Volver al Home -->
+        <a class="back-btn" href="../../Home/admin_home.html">← Regresar</a>
+
+        <!-- Mensaje global -->
+        <p id="statusMsg" class="status" hidden></p>
+
+        <!-- TARJETA 1: Buscar por ID -->
+        <div class="card">
+          <div class="card-title">Buscar producto por ID</div>
+
+          <form class="form" id="formBuscar" novalidate>
+            <label>
+              <span>ID del producto</span>
+              <!-- Campo de texto (sin spinner). En móvil abre teclado numérico -->
+              <input type="text" id="buscarId" placeholder="1" inputmode="numeric" pattern="[0-9]*" />
+              <small class="hint">Ingresa el ID exacto que viste en la lista.</small>
+            </label>
+
+            <div class="actions">
+              <button type="button" class="btn brand" id="btnBuscar">Cargar datos</button>
+            </div>
+          </form>
+
+          <p id="searchMsg" class="status" hidden></p>
+        </div>
+
+        <!-- TARJETA 2: Datos del producto (oculta hasta cargar) -->
+        <div class="card hidden" id="cardDatos">
+          <div class="card-title">Datos del producto</div>
+
+          <form class="form" id="formProducto" novalidate>
+            <label>
+              <span>Nombre del videojuego</span>
+              <input type="text" id="nombre" placeholder="Ej: The Last of Us Part II" />
+            </label>
+
+            <div class="row">
+              <label>
+                <span>Precio (CLP)</span>
+                <input type="number" id="precio" placeholder="Ej: 34990" min="1" step="1" />
+              </label>
+
+              <label>
+                <span>Stock (unidades)</span>
+                <input type="number" id="stock" placeholder="Ej: 25" min="0" step="1" />
+              </label>
+            </div>
+
+            <label>
+              <span>Plataforma</span>
+              <input type="text" id="plataforma" placeholder="Ej: PlayStation / PC / Xbox / Nintendo Switch" />
+            </label>
+
+            <label>
+              <span>Descripción (opcional)</span>
+              <textarea id="descripcion" rows="3" maxlength="300" placeholder="Máx. 300 caracteres"></textarea>
+            </label>
+
+            <label>
+              <span>Imagen (URL) (opcional)</span>
+              <input type="url" id="imagenUrl" placeholder="https://..." />
+              <small class="hint">Debe comenzar con http:// o https://</small>
+            </label>
+
+            <div class="actions">
+              <button type="button" class="btn brand" id="btnGuardar">Guardar cambios</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin_editarProducto.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Usuario | CDGames</title>
+  <link rel="stylesheet" href="admin_editarUsuario.css" />
+</head>
+
+<body>
+  <main class="main">
+    <header class="topbar">
+      <h1>Editar usuario</h1>
+    </header>
+
+    <section class="content">
+      <div class="wrap">
+
+        <!-- volver al Home -->
+        <a class="back-btn" href="../../Home/admin_home.html">← Regresar</a>
+
+        <!-- Mensaje global -->
+        <p id="statusGlobal" class="status" hidden></p>
+
+        <!-- TARJETA 1: Buscar por RUN -->
+        <div class="card">
+          <div class="card-title">Buscar usuario por RUN</div>
+
+          <form class="form" id="searchForm" novalidate>
+            <label>
+              <span>RUN del usuario</span>
+              <input id="buscarRun" type="text" placeholder="19011022K" />
+              <small class="hint">Ingresa el RUN sin puntos ni guion (puede terminar en K).</small>
+            </label>
+
+            <div class="actions">
+              <button type="button" id="btnBuscar" class="btn brand">Cargar datos</button>
+            </div>
+          </form>
+
+          <p id="searchMsg" class="status" hidden></p>
+        </div>
+
+        <!-- TARJETA 2: Formulario de edición (oculta) -->
+        <div id="editCard" class="card hidden">
+          <div class="card-title">Datos del usuario</div>
+
+          <form class="form" id="editForm" novalidate>
+            <div class="row">
+              <label>
+                <span>Nombre</span>
+                <input id="nombre" type="text" placeholder="Nombre" />
+              </label>
+
+              <label>
+                <span>Apellidos</span>
+                <input id="apellidos" type="text" placeholder="Apellidos" />
+              </label>
+            </div>
+
+            <label>
+              <span>Correo electrónico</span>
+              <input id="correo" type="text" placeholder="usuario@gmail.com" />
+              <small class="hint">Solo se permite @gmail.com.</small>
+            </label>
+
+            <label>
+              <span>Fecha de nacimiento (opcional)</span>
+              <input id="nacimiento" type="text" placeholder="AAAA-MM-DD" />
+            </label>
+
+            <label class="wide">
+              <span>Dirección</span>
+              <input id="direccion" type="text" placeholder="Calle, número, depto" />
+            </label>
+
+            <div class="row">
+              <label>
+                <span>Región</span>
+                <input id="region" type="text" placeholder="Metropolitana" />
+              </label>
+
+              <label>
+                <span>Comuna</span>
+                <input id="comuna" type="text" placeholder="Maipú" />
+              </label>
+            </div>
+
+            <div class="actions">
+              <button type="button" id="btnGuardar" class="btn brand">Guardar cambios</button>
+            </div>
+          </form>
+
+          <p id="editMsg" class="status" hidden></p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- JS de Editar Usuario -->
+  <script src="admin_editarUsuario.js" defer></script>
+</body>
+
+</html>

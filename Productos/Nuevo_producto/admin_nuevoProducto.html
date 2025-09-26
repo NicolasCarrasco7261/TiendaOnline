@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Añadir producto | CDGames</title>
+  <link rel="stylesheet" href="admin_nuevoProducto.css" />
+</head>
+
+<body>
+  <main class="main">
+    <header class="topbar">
+      <h1>Añadir producto</h1>
+    </header>
+
+    <section class="content">
+      <div class="wrap">
+        <!-- Botón volver al Home -->
+        <a class="back-btn" href="../../Home/admin_home.html">← Regresar</a>
+
+        <!-- Mensaje (lo usa el JS) -->
+        <p id="statusMsg" class="status" hidden></p>
+
+        <div class="card">
+          <div class="card-title">Registro de producto</div>
+
+          <form class="form" novalidate>
+            <label>
+              <span>Nombre del videojuego</span>
+              <input type="text" placeholder="Ej: The Last of Us Part II" />
+            </label>
+
+            <div class="row">
+              <label>
+                <span>Precio (CLP)</span>
+                <input type="text" placeholder="Ej: 34990" />
+              </label>
+
+              <label>
+                <span>Stock (unidades)</span>
+                <input type="text" placeholder="Ej: 25" />
+              </label>
+            </div>
+
+            <label>
+              <span>Plataforma</span>
+              <input type="text" placeholder="Ej: PlayStation / PC / Xbox / Nintendo Switch" />
+            </label>
+
+            <label class="wide">
+              <span>Descripción (opcional)</span>
+              <input type="text" placeholder="Máx. 300 caracteres" />
+            </label>
+
+            <label class="wide">
+              <span>Imagen (URL) (opcional)</span>
+              <input type="text" placeholder="https://..." />
+              <small class="hint">Debe comenzar con http:// o https://</small>
+            </label>
+
+            <div class="actions">
+              <button type="button" class="btn brand">Guardar producto</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Conexión al JS -->
+  <script src="admin_nuevoProducto.js" defer></script>
+</body>
+
+</html>
