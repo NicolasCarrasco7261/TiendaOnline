@@ -1,3 +1,5 @@
+// Menu interactivo navbar
+
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
@@ -10,24 +12,98 @@ menuBtn.addEventListener("click", () => {
         menuBtn.innerHTML = "☰";
         menuBtn.setAttribute("aria-expanded", "false")
     }
-
-
 });
 
 // Funciones para ir login y register
 
 function irLogin() {
-    window.location.href = "/assets/views/login.html";
+    window.location.href = "../views/login.html";
 }
 function irRegister() {
-    window.location.href = "/assets/views/register.html";
+    window.location.href = "../views/register.html";
 }
 
 // Spawn de Cards
 
-fetch("/assets/data/producto.json")
-  .then(response => response.json())
-  .then(data => {
+const data = [
+  {
+    "id": 1,
+    "titulo": "Cyberpunk 2077",
+    "descripcion": "Un RPG futurista en una ciudad abierta llena de historias.",
+    "imagen": "https://nxtgame.cl/wp-content/uploads/2023/06/cyberpunk-2077.jpg",
+    "precio": 39990,
+    "requisitos_minimos": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5-3570K",
+      "ram": "8 GB",
+      "gpu": "GTX 780"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i7-4790",
+      "ram": "16 GB",
+      "gpu": "GTX 1060"
+    }
+  },
+  {
+    "id": 2,
+    "titulo": "Red Dead Redemption 2",
+    "descripcion": "Acción y aventura en el salvaje oeste con gráficos realistas.",
+    "imagen": "https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png",
+    "precio": 45990,
+    "requisitos_minimos": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5-2500K",
+      "ram": "8 GB",
+      "gpu": "GTX 770"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i7-4770K",
+      "ram": "12 GB",
+      "gpu": "GTX 1060 6GB"
+    }
+  },
+  {
+    "id": 3,
+    "titulo": "Minecraft",
+    "descripcion": "Construcción, supervivencia y creatividad en un mundo de bloques.",
+    "imagen": "https://cdnx.jumpseller.com/deus-digital/image/26018632/thumb/719/719?1659480453",
+    "precio": 19990,
+    "requisitos_minimos": {
+      "so": "Windows 7",
+      "procesador": "Intel Core i3",
+      "ram": "4 GB",
+      "gpu": "Intel HD Graphics 4000"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5",
+      "ram": "8 GB",
+      "gpu": "GTX 660"
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "Grand Theft Auto V",
+    "descripcion": "Mundo abierto con crimen, acción y múltiples personajes jugables.",
+    "imagen": "https://therpgstore.com/wp-content/uploads/2018/03/Grand-Theft-Auto-V-Premium-Edition-90.jpg",
+    "precio": 24990,
+    "requisitos_minimos": {
+      "so": "Windows 7",
+      "procesador": "Intel Core 2 Quad",
+      "ram": "4 GB",
+      "gpu": "Nvidia 9800 GT"
+    },
+    "requisitos_recomendados": {
+      "so": "Windows 10",
+      "procesador": "Intel Core i5-3470",
+      "ram": "8 GB",
+      "gpu": "GTX 660"
+    }
+  }
+];  
+
     const container = document.getElementById("cards");
 
     data.slice(0, 4).forEach(item => {
@@ -46,42 +122,7 @@ fetch("/assets/data/producto.json")
 
       container.appendChild(card);
     });
-  })
-  .catch(error => console.error("Error al cargar JSON:", error));
 
 function verMas() {
-    window.location.href = "/assets/views/producto.html";
+    window.location.href = "../views/producto.html";
 }
-
-// CONTACTO
-
-const form = document.getElementById("formulario");
-    const respuesta = document.getElementById("respuesta");
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const nombre = document.getElementById("nombre").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const mensaje = document.getElementById("mensaje").value.trim();
-
-      if (nombre === "" || email === "" || mensaje === "") {
-        swal ("Envio fallido",
-                 "Completa todos los campos solicitados", "error");
-        return;
-      }
-
-      // Validación simple de email
-      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!regexEmail.test(email)) {
-        swal ("Error al ingresar correo",
-                 "Debes ingresar un correo valido", "error");
-        return;
-      }
-
-      // Si pasa validación
-      swal ("Mensaje enviado exitosamente",
-                 "El mensaje ha sido enviado correctamente", "success");
-      // Limpiar campos
-      form.reset();
-    });
